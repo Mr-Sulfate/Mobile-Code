@@ -32,3 +32,15 @@ flutter test
 flutter run
 dart run bin/lab2_demo.dart
 ```
+
+Путь проекта содержит кириллицу. Если Android Gradle Plugin или компилятор
+шейдеров сообщает об этом ошибку, используйте обёртку с временными ASCII-путями:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tool\flutter_project.ps1 analyze
+powershell -ExecutionPolicy Bypass -File .\tool\flutter_project.ps1 test
+powershell -ExecutionPolicy Bypass -File .\tool\flutter_project.ps1 build apk --debug
+powershell -ExecutionPolicy Bypass -File .\tool\flutter_project.ps1 run
+```
+
+Готовый debug APK создаётся в `build/app/outputs/flutter-apk/app-debug.apk`.
