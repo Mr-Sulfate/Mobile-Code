@@ -10,7 +10,7 @@ void main() {
     );
 
     expect(find.text('Машков Матвей Сергеевич'), findsOneWidget);
-    expect(find.text('ПИбд-23 · лабораторные 1 и 2'), findsOneWidget);
+    expect(find.text('ПИбд-33 · лабораторные 1 и 2'), findsOneWidget);
 
     final analyzeButton = find.byKey(const Key('analyzeButton'));
     await tester.ensureVisible(analyzeButton);

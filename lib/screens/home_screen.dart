@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(height: 2),
             Text(
-              'ПИбд-23 · лабораторные 1 и 2',
+              'ПИбд-33 · лабораторные 1 и 2',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
             ),
           ],
