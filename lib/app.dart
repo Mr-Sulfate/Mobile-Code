@@ -16,7 +16,7 @@ class MobileLabsApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Лабораторные работы 1 и 2',
+      title: 'Лабораторная работа 1',
       theme: ThemeData(
         colorScheme: colorScheme,
         useMaterial3: true,

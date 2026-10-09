@@ -52,7 +52,7 @@ class StudyPlan {
       .where((task) => task.isCompleted)
       .fold(0, (sum, task) => sum + task.durationHours);
 
-  double get progress => tasks.isEmpty ? 0 : completedHours / totalHours;
+  double get progress => totalHours == 0 ? 0 : completedHours / totalHours;
 
   Map<StudyTaskStatus, int> countByStatus() {
     final counts = <StudyTaskStatus, int>{

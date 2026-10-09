@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 76,
+        toolbarHeight: 96,
         titleSpacing: 20,
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,13 +41,12 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Text(
               'Машков Матвей Сергеевич',
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
             ),
             SizedBox(height: 2),
             Text(
-              'ПИбд-33 · лабораторные 1 и 2',
+              'ПИбд-33',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
             ),
           ],
@@ -91,9 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           )
                         : const Icon(Icons.bolt_rounded),
                     label: Text(
-                      _isLoading
-                          ? 'Выполняется Future...'
-                          : 'Запустить анализ Future',
+                      _isLoading ? 'Рассчитываем...' : 'Рассчитать план',
                     ),
                   ),
                   AnimatedSwitcher(
@@ -245,9 +242,11 @@ class _AnalysisCard extends StatelessWidget {
               children: [
                 Icon(Icons.auto_graph_rounded),
                 SizedBox(width: 8),
-                Text(
-                  'Результат асинхронного анализа',
-                  style: TextStyle(fontWeight: FontWeight.w800),
+                Expanded(
+                  child: Text(
+                    'Результат асинхронного анализа',
+                    style: TextStyle(fontWeight: FontWeight.w800),
+                  ),
                 ),
               ],
             ),
